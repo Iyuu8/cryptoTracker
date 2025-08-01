@@ -49,3 +49,5 @@ form.addEventListener("submit", (e) => {
     }
     
 });
+
+console.log('hello');
