@@ -1,0 +1,125 @@
+/*this file is for the shared styles used across the login page and signup page which turned to be the whole thing*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --light: aliceblue;
+    --text-color: #333;
+    --login: #7fbef6;
+    --emphasize-login: #4f8df6;
+    --highlight: #8c1fe6;
+    --emphasize-hilight: #6f00c9;
+    --pink:#ff4081;
+    --warn-pink: #ff6a6a;
+    --dark-light:#4f4f4f;
+    --bkg-color1:#dbeafe;
+    --bkg-color2:#f0f4ff;
+}
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, var(--bkg-color1), var(--bkg-color2));
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 5ch;
+    white-space: nowrap;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(135deg, 
+        var(--login) 0%, 
+        var(--login) 10%, 
+        var(--emphasize-login), 
+        var(--highlight) 60%, 
+        var(--emphasize-hilight) 100%
+    );
+    padding: 2rem;
+    width: 50%;
+    border-radius: 1.5rem;
+    box-shadow:0px 4px 20px rgba(0, 0, 0, 0.278);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+form input{
+    width: 80%;
+    padding: 0.5rem;
+    border: 2px solid #78787800;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    font-size: larger;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--light);
+}
+form input:is(:focus, :hover){
+    border-color: var(--pink);
+}
+/* border-color: #ff9800; */
+form button{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--light);
+    color: var(--login);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: x-large;
+}
+form button:is(:hover, :focus){
+    background-color: var(--login);
+    color: var(--light);
+    transform: scale(1.05);
+}
+form button:active{
+    transition: all 0.1s ease-in-out;
+    transform: scale(1);
+}
+main p{
+    color: var(--warn-pink);
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.5ch;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+.warn::placeholder{
+    color: var(--warn-pink);
+}
+.signup-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.signup-login a:any-link{
+    color: var(--light);
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}

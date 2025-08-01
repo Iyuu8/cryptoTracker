@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CoinPrx</title>
+        <link rel="stylesheet" href="css/home.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>C</h1>
+            </div>
+            <h1 class="header-title">Welcome to CoinPrx <span></span></h1>
+        </header>
+
+        <main>
+            <!-- functionality>>complexity -->
+             <div class="control">
+                <div class="selected-coin">
+                    <h2>Selected Coin: Bitcoin <i class="fa-brands fa-bitcoin"></i></h2>
+                </div>
+                <div class="select-container">
+                    <button type="button" class="select-button">
+                        <p>select currency</p>
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                    <nav>
+                        <ul class="currency-list">
+                                <!-- Example currency items -->
+                            <li class="currency-item" data-currency="Ethereum">Ethereum <i class="fa-brands fa-ethereum"></i></li>
+                            <li class="currency-item" data-currency="Bitcoin">Bitcoin <i class="fa-brands fa-bitcoin"></i></li>
+                            <li class="currency-item" data-currency="Litecoin">Litecoin <i class="fa-solid fa-litecoin-sign"></i></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="details">
+                    <!-- these details may change later -->
+                    <h2>Currency Details</h2>
+                    <p id="currency-price">Price: 0.00$</p>
+                </div>
+             </div>
+
+             <div class="graph">
+                <canvas id="currencyChart" width="950" height="550"></canvas>   
+             </div>
+        </main>
+        <script src="./node_modules/chart.js/dist/chart.umd.min.js"></script>
+        <script src="https://kit.fontawesome.com/c0ecd3a312.js" crossorigin="anonymous"></script>
+        <script src="./jsFiles/home.js"></script>
+    </body>
+</html>

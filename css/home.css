@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --light: aliceblue;
+    --text-color: #333;
+    --bkg-color1:#dbeafe;
+    --bkg-color2:#f0f4ff;
+    --blue-light: #7fbef6;
+    --emphasize-blue: #4f8df6;
+    --blue-hover:#7f93f6;
+    --purp-light: #8c1fe6;
+    --emphasize-purp: #6f00c9;
+}
+html,body{
+    height: 100%;
+    background-image: linear-gradient(135deg,var(--bkg-color1), var(--bkg-color2));
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-image: linear-gradient(135deg, 
+        var(--blue-light)10%, 
+        var(--emphasize-blue)25%,
+        var(--purp-light)70%, 
+        var(--emphasize-purp)100%
+    );
+    border-radius: 50%;
+    font-size: 4ch;
+    font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--light);
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+.header-title{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--text-color);
+    font-size: 2rem;
+    background-image: linear-gradient(135deg, 
+        var(--blue-light) 0%, 
+        var(--blue-light) 10%, 
+        var(--emphasize-blue), 
+        var(--purp-light) 60%, 
+        var(--emphasize-purp) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+main{
+    padding: 2rem;
+    display: grid;
+    height: 85%;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-areas: "gr gr gr gr gr gr gr cn cn cn";    
+}
+.control{
+    grid-area: cn;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.select-container{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    width: 100%;
+}
+.select-container button{
+    background-color: var(--emphasize-blue);
+    color: var(--light);
+    padding: 0.5rem 2rem;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3ch;
+    width: 100%;
+    border-radius:  0.6rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.currency-list{
+    list-style: none;
+    background-color: var(--blue-light);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3ch;
+    border-radius: 0.6rem;
+    overflow-y: hidden;
+    transition: all 0.5s linear;
+    /*will be set later through js*/
+}
+.currency-list li{
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.currency-list li:nth-child(1){
+    border-top-left-radius: 0.57rem;
+    border-top-right-radius: 0.57rem;
+
+}
+.currency-list li:hover{
+    background-color: var(--blue-hover);
+    color: var(--light);
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-image: linear-gradient(135deg, 
+        var(--blue-light) 0%, 
+        var(--blue-light) 10%, 
+        var(--emphasize-blue), 
+        var(--purp-light) 60%, 
+        var(--emphasize-purp) 100%
+    );
+    color: var(--light);
+    border-radius: 0.6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3ch;
+    height: 100%;
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.select-button i{
+    transition: all 0.2s ease-in-out;
+    
+}
+.graph{
+    grid-area: gr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--light);
+    border-radius: 0.6rem;
+    margin-right: 2rem;
+}
+.selected-coin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--emphasize-blue);
+    color: var(--light);
+    border-radius: 0.6rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5ch;
+}
+.checked{
+    background-color: var(--blue-hover);
+}
